@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      /* Gradient background */
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    .container {
+      width: 600px; /* Adjust the width as needed */
+      padding: 20px;
+      text-align: center; /* Center-align text */
+      border: 3px solid #007bff; /* Attractive blue border */
+      border-radius: 20px; /* Rounded corners */
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+      position: relative; /* Position the container */
+    }
+
+    h2 {
+      color: #007bff; /* Blue color for headings */
+    }
+
+    p {
+      font-size: 18px; /* Adjust font size as needed */
+    }
+
+    .logo {
+      position: absolute; /* Position the logo */
+      top: 10px; /* Adjust the top position */
+      left: 10px; /* Adjust the left position */
+      width: 100px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    .hire-button {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+    }
+
+    .hire-button:hover {
+      background-color: #0056b3; /* Darker blue on hover */
+      transform: scale(1.1); /* Scale up on hover */
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img class="logo" src="logo-no-background.png" alt="Logo"> 
+  <div class="container">
+    <h2>About Us</h2>
+    <p>"See, Hear, Understand!"</p>
+    <p>"TextPix" is an innovative app uniting image recognition and text-to-speech technology. Our mission is universal accessibility for visual content. Snap a photo or select an image, and TextPix swiftly identifies objects, scenes, and text within it. It generates descriptive text, benefiting individuals with visual impairments and providing valuable context for all users.</p>
+    <p>But TextPix goes beyond text; it offers a user-friendly text-to-speech feature, allowing you to listen to descriptions in a clear, natural voice. Our commitment to innovation and accessibility drives us to continually enhance TextPix. Join us in our mission to foster inclusivity and create a more accessible digital world with TextPix.</p>
+    <a href="Contact us.html" class="hire-button">Contact Us!!</a>
+  
+</div>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      /* Gradient background */
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    .container {
+      width: 600px;
+      /* Adjust the width as needed */
+      padding: 20px;
+      text-align: center;
+      /* Center-align text */
+      border: 3px solid #007bff;
+      /* Attractive blue border */
+      border-radius: 20px;
+      /* Rounded corners */
+      background-color: rgba(255, 255, 255, 0.8);
+      /* Semi-transparent white background */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      /* Shadow effect */
+      position: relative;
+      /* Position the container */
+    }
+
+    h2 {
+      color: #007bff;
+      /* Blue color for headings */
+    }
+
+    p {
+      font-size: 18px;
+      /* Adjust font size as needed */
+    }
+
+    .logo {
+      position: absolute;
+      /* Position the logo */
+      top: 10px;
+      /* Adjust the top position */
+      left: 10px;
+      /* Adjust the left position */
+      width: 100px;
+      /* Adjust the width as needed */
+      height: auto;
+      /* Maintain aspect ratio */
+    }
+
+    .hire-button {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+    }
+
+    .hire-button:hover {
+      background-color: #0056b3;
+      /* Darker blue on hover */
+      transform: scale(1.1);
+      /* Scale up on hover */
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      color: #0f0202;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: rgb(15, 6, 6);
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #32cbd3;
+      color: rgb(10, 7, 7);
+    }
+
+    .topnav-right {
+      float: right;
+      position: absolute;
+      top: 30px;
+      /* Adjust the top position */
+      left: 900px;
+      /* Adjust the left position */
+      width: 700px;
+      /* Adjust the width as needed */
+      height: auto;
+      /* Maintain aspect ratio */
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="topnav">
+    <img class="logo" src="logo-no-background.png">
+    <div class="topnav-right">
+      <pre>
+    <a class="active" href="home.html">  Home   |</a><a class="active" href="Contact us.html">Contact Us  |</a><a class="active" href="About us.html">About Us  </a>
+    </pre>
+    </div>
+  </div>
+  <form action="/action_page.php"></form>
+  <div class="container">
+    <center>
+      <label for="myfile">
+        <h1>Selected Image Information:</h1>
+      </label><br>
+      
+      <br><br>
+      <a href="#" class="hire-button">Text To Speech</a>
+
+    </center>
+  </div>
+
+  </form>
+
+
+
+</body>
+</html>

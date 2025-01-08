@@ -1,0 +1,303 @@
+x`<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      /* Gradient background */
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    .container {
+      width: 600px;
+      /* Adjust the width as needed */
+      padding: 20px;
+      text-align: center;
+      /* Center-align text */
+      border: 3px solid #007bff;
+      /* Attractive blue border */
+      border-radius: 20px;
+      /* Rounded corners */
+      background-color: rgba(255, 255, 255, 0.8);
+      /* Semi-transparent white background */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      /* Shadow effect */
+      position: relative;
+      /* Position the container */
+    }
+
+    h2 {
+      color: #007bff;
+      /* Blue color for headings */
+    }
+
+    p {
+      font-size: 18px;
+      /* Adjust font size as needed */
+    }
+
+    .logo {
+      position: absolute;
+      /* Position the logo */
+      top: 10px;
+      /* Adjust the top position */
+      left: 10px;
+      /* Adjust the left position */
+      width: 100px;
+      /* Adjust the width as needed */
+      height: auto;
+      /* Maintain aspect ratio */
+    }
+
+    .hire-button {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+    }
+
+    .hire-button:hover {
+      background-color: #0056b3;
+      /* Darker blue on hover */
+      transform: scale(1.1);
+      /* Scale up on hover */
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      color: #0f0202;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: rgb(15, 6, 6);
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #32cbd3;
+      color: rgb(10, 7, 7);
+    }
+
+    .topnav-right {
+      float: right;
+      position: absolute;
+      top: 30px;
+      /* Adjust the top position */
+      left: 900px;
+      /* Adjust the left position */
+      width: 700px;
+      /* Adjust the width as needed */
+      height: auto;
+      /* Maintain aspect ratio */
+    }
+
+    body {
+      text-align: center;
+      margin: 50px;
+    }
+
+    #selectedImage {
+      max-width: 100%;
+      max-height: 500px;
+      display: none;
+    }
+
+.chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            width: 100%;
+            padding: 10px;
+            overflow-y: auto; /* Enable vertical scrollbar */
+            max-height: 300px; /* Set a maximum height for the chat container */
+        }
+
+        .chatbot-container h2 {
+            color: #007bff;
+        }
+
+        .chatbot-container p {
+            font-size: 18px;
+        }
+
+
+   /* Add styles for the chatbot container */
+.chatbot-container {
+    /* ... (previous styles) ... */
+    overflow-y: auto; /* Enable vertical scrollbar */
+    max-height: 300px; /* Set a maximum height for the chat container */
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="topnav">
+    <img class="logo" src="logo-no-background.png">
+    <div class="topnav-right">
+      <pre>
+    <a class="active" href="home.html">  Home   |</a><a class="active" href="Contact us.html">Contact Us  |</a><a class="active" href="About us.html">About Us  </a>
+    </pre>
+    </div>
+  </div>
+
+
+
+<div class="chatbot-container">
+    <h2>Chatbot</h2>
+    <div id="chat-body">
+        <!-- Chat messages will be displayed here -->
+    </div>
+    <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Type a message..." autocomplete="off">
+        <button type="submit">Send</button>
+    </form>
+</div>
+  <form action="/action_page.php"></form>
+  <div class="container">
+    <center>
+        
+      <label for="myfile">
+        <h1>Select a Image:</h1>
+      </label><br>
+
+      <!--<input type="file" id="myfile" name="myfile"><br><br>
+      <a href="upload.html" class="hire-button">Upload</a>-->
+
+      <input type="file" id="imageInput" accept="image/*"><br><br>
+      <img src="" alt="Selected Image" id="selectedImage" style="display:none;">
+
+      <br><br>
+      <a href="upload.html" class="hire-button">Get Info</a>
+
+    </center>
+  </div>
+
+  </form>
+
+  <script>
+    const imageInput = document.getElementById('imageInput');
+    const selectedImage = document.getElementById('selectedImage');
+
+    imageInput.addEventListener('change', function () {
+        const file = imageInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                selectedImage.src = e.target.result;
+                selectedImage.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const chatForm = document.getElementById("chat-form");
+        const chatBody = document.getElementById("chat-body");
+        const userInput = document.getElementById("user-input");
+
+        chatForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const userMessage = userInput.value.trim();
+            if (userMessage === "") return;
+
+            appendMessage("You", userMessage);
+            userInput.value = "";
+
+            // Simulate a response from the chatbot
+            fetchChatbotResponse(userMessage);
+        });
+
+        function appendMessage(sender, message) {
+            const messageDiv = document.createElement("div");
+            messageDiv.className = "message";
+            messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            chatBody.appendChild(messageDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function fetchChatbotResponse(userMessage) {
+            // Send the user's message to the server (you can replace this with your backend)
+            // and receive a chatbot response. For now, we'll use custom responses.
+            const botMessage = chatbotResponse(userMessage);
+
+            // Simulate a delay before receiving the response (for a more realistic feel)
+            setTimeout(() => {
+                appendMessage("Chatbot", botMessage);
+            }, 500);
+        }
+function chatbotResponse(userInput) {
+    // Define custom responses for app-related questions
+    userInput = userInput.toLowerCase();
+
+    if (userInput.includes("hello")) {
+        return "Hello! How can I assist you with our app today?";
+    } else if (userInput.includes("how does the app work")) {
+        return "Our app is designed to provide interactive image descriptions with text-to-speech functionality. You can select an image, and the app will generate a description for it. You can also use the 'Read Description' button to listen to the description.";
+    } else if (userInput.includes("features")) {
+        return "Some of the key features of our app include:\n- Interactive image description\n- Text-to-speech functionality\n- Easy image selection and description retrieval";
+    } else if (userInput.includes("usage")) {
+        return "To use our app, simply select an image by clicking the 'Select an Image' button. The app will generate a description for the selected image. You can also click the 'Read Description' button to have the description read aloud.";
+    } else if (userInput.includes("contact")) {
+        return "If you have any further questions or need assistance, please feel free to contact our support team at support@example.com.";
+    } else if (userInput.includes("bye")) {
+        return "Goodbye! Have a great day!";
+    } else {
+        return "I'm not sure I understand your question. If you have questions about our app, please ask, and I'll do my best to assist you.";
+    }
+}
+
+      
+    });
+</script>
+
+
+</body>
+</html>

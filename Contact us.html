@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <!-- Include Font Awesome CSS for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      /* Gradient background */
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      font-family: 'Fira Sans', sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      width: 800px;
+      padding: 20px;
+      text-align: center;
+      border: 3px solid #007bff;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100px;
+      height: auto;
+      z-index: -1; /* Place the logo behind the form */
+    }
+
+    h2 {
+      color: #007bff;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .contact-form {
+      text-align: left;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    .form-group .btn-submit {
+      background: #F1B4BB; /* Change the button color */
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease-in-out;
+    }
+
+    .form-group .btn-submit:hover {
+      background: #FF809D; /* Change the button color on hover */
+      transform: scale(1.1);
+    }
+
+    /* Style for social media icons */
+    .social-media {
+      margin-top: 20px;
+    }
+
+    .social-media h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .social-media a {
+      margin-right: 20px;
+      font-size: 20px;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    /* Add more social media icons as needed */
+    .social-media .fa-facebook {
+      color: #3b5998; /* Facebook color */
+    }
+
+    .social-media .fa-twitter {
+      color: #1da1f2; /* Twitter color */
+    }
+
+    .social-media .fa-instagram {
+      color: #c13584; /* Instagram color */
+    }
+
+    .social-media .fa-dribbble {
+      color: #ea4c89; /* Dribbble color */
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img class="logo" src="logo-no-background.png" alt="Logo">
+
+  <div class="container">
+<div class="topnav-right">
+    <pre>
+    <a class="active" href="hi.html">  Home   |</a><a class="active" href="Contact us.html">Contact Us  |</a><a class="active" href="About us.html">About Us  </a>
+    </pre>
+  </div>
+    <h2>Contact Us</h2>
+
+    <p>We're open for any suggestion, feedback, or just to have a chat. Feel free to reach out to us.</p>
+    <form class="contact-form" method="POST" id="contactForm" name="contactForm">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email:</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message:</label>
+        <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Your Message"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Send Message" class="btn-submit">
+      </div>
+
+
+    </form>
+    <div class="form-group social-media">
+      <h3>Follow Us on Social Media:</h3>
+      <p>
+        <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook"></a>
+        <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/" target="_blank" class="fab fa-instagram"></a>
+        <a href="https://dribbble.com/" target="_blank" class="fab fa-dribbble"></a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
